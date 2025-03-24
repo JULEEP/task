@@ -39,15 +39,25 @@ import ClientsTable from "./Pages/ClientsTable.js";
 import ProjectsTable from "./Pages/ProjectsTable.js";
 import ProjectTasksTable from "./Pages/ProjectTasksTable.js";
 import ManageProjects from "./Pages/ManageProject.js";
+import EmployeeTracking from "./Employee/EmployeeTracking.js";
+import TrackingTable from "./Employee/TrackingTable.js";
+import ScreenActivityTracker from "./Employee/ScreenActivityTracker.js";
+import DailyWorkTable from "./Employee/DailyWorkTable.js";
+import EmployeeWorkUpdate from "./Employee/EmployeeWorkUpdate.js";
+import EmployeeTrackingTable from "./Employee/EmployeeTrackingTable.js";
+import BreakTrackingTable from "./Employee/BreakTrackingTable.js";
+import AdminBreakTrackingTable from "./Employee/AdminBreakTrackingTable.js";
+import Delivery from './Employee/Delivery.js'
+import ComingSoon from "./Pages/ComingSoon.js";
 
 
 
 
 function App() {
   return (
-    <AdminLayout>
       <Routes>
-        <Route path="/" element={<Dashboard/>}/>
+        <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/" element={<Delivery/>}/>
         <Route path="/department" element={<DepartmentList/>}/>
         <Route path="/subdepartment" element={<SubDepartmentList/>}/>
         <Route path="/position" element={<Position/>}/>
@@ -69,7 +79,7 @@ function App() {
         <Route path="/backupreset" element={<BackupReset />} />
         <Route path="/awardlist" element={<AwardList/>} />
         <Route path="/message" element={<MessagesTable/>} />
-        <Route path="/noticelist" element={<NoticeList/>} />
+        <Route path="/deliverydetails-list" element={<NoticeList/>} />
         <Route path="/sentlist" element={<SentMessagesTable/>} />
         <Route path="/setuplist" element={<SetupRulesTable/>} />
         <Route path="/salaryadvance" element={<SalaryAdvance />} />
@@ -82,11 +92,22 @@ function App() {
         <Route path="/projects" element={<ProjectsTable />} />
         <Route path="/task" element={<ProjectTasksTable />} />
         <Route path="/manage-project" element={<ManageProjects />} />
+        <Route path="/track-employee" element={<EmployeeTracking />} />
+        <Route path="/track-table" element={<TrackingTable />} />
+        <Route path="/track" element={<ScreenActivityTracker />} />
+        <Route path="/daily-workupload" element={<DailyWorkTable />} />
+        <Route path="/employee-work" element={<EmployeeWorkUpdate />} />
+        <Route path="/employee-track" element={<EmployeeTrackingTable />} />
+        <Route path="/break" element={<BreakTrackingTable />} />
+        <Route path="/employee-break" element={<AdminBreakTrackingTable />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
 
 
 
-      </Routes>
-    </AdminLayout>
+
+
+
+      </Routes>    
   );
 }
 
